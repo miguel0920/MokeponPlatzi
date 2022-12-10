@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;600&family=Oswald:wght@300;600&display=swap');
+
+body {
+    background: #00ABB3;
+    font-family: 'Oswald', sans-serif;
+}
+
+.titulo {
+    color: white;
+    font-size: 36px;
+}
+
+.subtitulo {
+    color: white;
+    font-size: 24px;
+}
+
+#seleccionar-mascota {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjetas {
+    display: flex;
+    height: 180px;
+}
+
+.tarjeta-de-mokepon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3C4048;
+    width: 250px;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.tarjeta-de-mokepon input[type=radio] {
+    background: #B2B2B2;
+}
+
+.tarjeta-de-mokepon img {
+    width: 110px;
+}
+
+#boton-mascota {
+    width: 250px;
+    height: 50px;
+    background: #B2B2B2;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid white;
+    font-family: 'Inter', sans-serif;
+    margin-top: 20px;
+}
+
+#boton-mascota:hover {
+    background-color: #00ABB3;
+}
+
+input {
+    display: none;
+}
+
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-de-ataque {
+    background-color: #3C4048;
+    border-radius: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-color: transparent;
+    color: white;
+    width: 200px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    height: 50px;
+    font-size: 16px;
+}
+
+.mensaje {
+    display: flex;
+    width: 350px;
+    background: white;
+    font-size: 20px;
+    height: 120px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+#boton-reiniciar{
+    border: none;
+    color: #00ABB3;
+    background: none;
+    font-size: 16px;
+}
