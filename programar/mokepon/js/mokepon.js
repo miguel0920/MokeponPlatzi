@@ -156,6 +156,19 @@ function iniciarJuego() {
 
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador);
     botonReiniciar.addEventListener('click', reiniciarJuego);
+
+    unirseAlJuego();
+}
+
+function unirseAlJuego() {
+    fetch('http://localhost:8080/unirse')
+        .then((res) => {
+            if (res.ok) {
+                res.text().then((respuesta) => {
+                    console.log(respuesta);
+                });   
+            }
+        });
 }
 
 function seleccionarMascotaJugador() {
