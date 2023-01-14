@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 
 const app = express();
+app.use(express.static('public'));
 app.use(cors());
 app.use(express.json());
 
@@ -21,7 +22,7 @@ class Jugador {
         this.y = y;
     }
 
-    asignarAtaques(ataques){
+    asignarAtaques(ataques) {
         this.ataques = ataques;
     }
 }
@@ -78,6 +79,19 @@ app.post('/mokepon/:jugadorId/ataques', (req, res) => {
 
     res.send({
         enemigos
+    });
+});
+
+app.get('/mokepon/:jugadorId/ataques', (req, res) => {
+    const jugadorId = req.params.jugadorId || '';
+    const jugador = jugadores.find((jugador) => jugador.id === jugadorId);
+    if (jugador !== null) {
+        res.send({
+            ataques: jugador.ataques || []
+        });
+    }
+    res.send({
+        ataques: []
     });
 });
 
