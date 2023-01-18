@@ -2,6 +2,9 @@ import express from 'express';
 import cors from 'cors';
 
 const app = express();
+//Ingresar desde Linux o Mac.
+//Correr el comando: HostName
+//http://{HostName}.local:8080
 app.use(express.static('public'));
 app.use(cors());
 app.use(express.json());
